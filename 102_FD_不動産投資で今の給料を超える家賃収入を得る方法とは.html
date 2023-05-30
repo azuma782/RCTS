@@ -1,0 +1,564 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<meta http-equiv="Content-Language" content="ja" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<meta name="viewport" content="initial-scale=1.0,width=device-width" /> 
+<!--[if lt IE 9]>
+[removed][removed]
+<![endif]--> 
+<style type="text/css">
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    padding: 0;
+    margin:0;
+    font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック','MS P Gothic',sans-serif;
+    box-sizing: border-box;}
+body{
+    line-height:100%;
+    font-size:14px;
+    background: #f9f9f9;
+    color: #333333;
+    -webkit-text-size-adjust: 100%;/*文字サイズ自動調整させない*/}
+ul{ list-style: none;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;}
+.clearfix{ clear:both;}
+* html .clearfix{ height:1%;}
+a img{ border:0;}
+a:hover img{
+    filter:alpha(opacity=80);
+    -moz-opacity:0.80;
+    opacity:0.80;}
+a:link {
+    color:#000099;
+    text-decoration: none;}
+a:visited {
+    text-decoration: none;
+    color:#000099;}
+a:hover {
+    text-decoration: underline;
+    color: #000099;}
+a:active {
+    text-decoration: none;
+    color:#000099;}
+.pc_none{ 
+    display: none;}
+.mt0{ margin-top: 0 !important;}
+.pt0{ padding-top: 0 !important;}
+.pt10{ padding-top: 10px !important;}
+.pt20{ padding-top: 20px !important;}
+.pt30{ padding-top: 30px !important;}
+.pt40{ padding-top: 40px !important;}
+.pt50{ padding-top: 50px !important;}
+.pt60{ padding-top: 60px !important;}
+.pt70{ padding-top: 70px !important;}
+.pt80{ padding-top: 80px !important;}
+.pt90{ padding-top: 90px !important;}
+.pt100{ padding-top: 100px !important;}
+.pb0{ padding-bottom: 0 !important;}
+.pb10{ padding-bottom: 10px !important;}
+.pb20{ padding-bottom: 20px !important;}
+.pb30{ padding-bottom: 30px !important;}
+.pb40{ padding-bottom: 40px !important;}
+.pb50{ padding-bottom: 50px !important;}
+.pb60{ padding-bottom: 60px !important;}
+.pb70{ padding-bottom: 70px !important;}
+.pb80{ padding-bottom: 80px !important;}
+.pb90{ padding-bottom: 90px !important;}
+.pb100{ padding-bottom: 100px !important;}
+.font13{ 
+    font-size: 13px;}
+.txt_bold{ 
+    font-weight: bold;}
+.txt_left { 
+    text-align:left;}
+.txt_center { 
+    text-align:center;}
+.txt_right { 
+    text-align:right;}
+.valign_top{ 
+    vertical-align: top;}
+.bg_fabl01{
+    background:#1c2569;
+    color: #fff;}
+.bg_fabl02{
+    background:#00afec;
+    color: #fff;}
+.bg_fudo{
+    background:#0092d8;
+    color: #fff;}
+.bg_kabu{
+    background:#2c4198;
+    color: #fff;}
+.bg_fx{
+    background:#d7063a;
+    color: #fff;}
+.bg_orange{
+    background:#e95520;
+    color: #fff;}
+.txt_fabl01{ 
+    color:#1c2569;}
+.txt_fabl02{ 
+    color:#00afec;}
+.txt_fudo{ 
+    color:#0092d8;}
+.txt_kabu{ 
+    color:#2c4198;}
+.txt_fx{ 
+    color:#d7063a;}
+.txt_orange{ 
+    color: #e95520;}
+.table_fabl01{ 
+    border: 1px solid #1c2569;}
+.table_fabl02{ 
+    border: 1px solid #00afec;}
+.table_kabu{ 
+    border:1px solid #2c4198;}
+.table_fudo{ 
+    border:1px solid #0092d8;}
+.table_fx{ 
+    border:1px solid #d7063a;}
+.table_orange{ 
+    border:1px solid #e95520;}
+/* table */
+table{
+    table-layout: fixed;
+    width: 100%;
+    border: 0;
+    border-collapse:collapse;
+    padding:0;}
+.cont01 {
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    background: #FFFFFF;}
+.table01 th{
+    padding:20px 10px;
+    font-weight:normal;
+    text-align:center;}
+#learning .table01 th{
+    width: 310px;
+    padding: 20px;
+    font-weight: normal;
+    text-align: left;}
+#learning .table01 th .img01{
+    border: 1px solid #e95520;
+    padding: 20px 10px;
+    text-align: center;}
+#learning .table01 th .img01 h3{
+    font-size: 16px;
+    padding-top: 10px;}
+#learning .table01 th .img01 .txt{
+    line-height: 20px;
+    font-size: 13px;
+    padding-top: 10px;}
+.table02 th{
+    width: 50%;
+    text-align: center;
+    padding: 10px;}
+.table03{
+    margin: 20px auto;
+    width: 94%;
+    text-align: center;}
+.table03 th{
+    width: 50%;
+    padding: 15px 10px;}
+.table04 th{
+    width: 50%;
+    padding: 20px 10px;
+    text-align: center;
+    vertical-align: top;}
+.table03 th .img_caption,
+.table04 th .img_caption{
+    font-size:16px;
+    font-weight:bold;
+    line-height:24px;
+    padding-top:10px;}
+/* btn */
+.btn01{
+    width: 300px;
+    border: 0;
+    border-collapse:collapse;
+    padding:0;
+    margin:0 auto;}
+.btn01 .ttl{
+    width: 255px;
+    height: 70px;
+    vertical-align: middle;
+    color:#FFFFFF;
+    padding:10px 0px 10px 40px;
+    font-size:18px;
+    line-height:24px;
+    font-weight:bold;
+    text-align:center;}
+.btn01 .arw{
+    width: 45px;
+    vertical-align: middle;
+    text-align: left;}
+/* img */
+.img02{ 
+    text-align: center;}
+.imgbox02 img{
+    display:block;
+    width: 90%;
+    height: auto;
+    margin:0 auto;}
+/* トップエリア */
+.caution_top{
+    padding: 10px 15px 5px;
+    text-align: right;
+    font-size: 10px;}
+.hdlogo{ 
+    padding:10px 5px 15px;}
+.titleh1{ 
+    padding:20px 15px 15px;}
+.titleh1 h1{
+    color:#15165A;
+    text-align:right;
+    font-size:20px;
+    font-weight:bold;}
+.imgbox01{
+    display: block;
+    width: 100%;}
+.imgbox01 img{
+    display: block;
+    max-width: 100%;
+    height: auto;}
+.border01{
+    width: 100%;
+    background: #15165A;
+    padding-top: 10px;}
+/* コンテンツエリア */
+.txtbox01{ 
+    padding: 30px;}
+.txtbox01 p{
+    line-height: 24px;
+    padding-bottom: 20px;}
+.titleh2{
+    text-align: center;
+    padding-bottom: 20px;}
+.titleh2 img{
+    display: block;
+    margin:0 auto 5px;}
+.titleh2 .sub{
+    color: #333;
+    font-size:13px;
+    line-height:20px;
+    font-weight:bold;
+    display: block;}
+.caution_ttl{
+    font-size: 12px;
+    line-height: 13px;
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;}
+.face{ width: 80px;}
+.face_caption p.name{
+    font-size:13px;
+    line-height:20px;
+    padding-bottom:5px;}
+.face_caption p.comment{
+    font-weight:normal;
+    font-size:13px;
+    line-height:20px;
+    padding:5px 8px;}
+.icn01{
+    width: 30px;
+    text-align: left;
+    vertical-align: top;
+    font-size:19px;
+    line-height:24px;
+    font-weight:bold;}
+.table_kabu .icn01{ color:#2c4198;}
+.table_fudo .icn01{ color:#0092d8;}
+.table_fx .icn01{ color:#d7063a;}
+.icn01_txt{
+    vertical-align: top;
+    font-weight: normal;
+    line-height:24px;
+    padding-bottom:10px;}
+.pd_table{
+    padding: 15px 10px;
+    text-align: left;}
+.temp_voice{
+    line-height: 24px;
+    padding-bottom: 20px;}
+.course{ padding: 10px;}
+.course h3{
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 24px;
+    text-align: center;}
+.course.table_fabl02 h3.name{ 
+    border-bottom: 1px solid #00afec;}
+.course.table_fabl02 h3.price{ 
+    border-top: 1px solid #00afec;}
+.course ul.list{
+    list-style: disc outside;
+    padding: 5px 10px 15px 15px;
+    line-height: 20px;
+    font-weight: normal;}
+.course ul.list li{
+    font-size: 13px;
+    padding-top: 10px;}
+/* フッターエリア */
+#footer{
+    padding-top:20px;
+    padding-bottom:10px;}
+#footer h1{
+    text-align: center;
+    padding-bottom: 20px;}
+#footer .footertxt{
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;}
+#footer .footertxt a{ color: #45a8de;}
+#footer .table_ft th{
+    width: 50%;
+    font-weight:normal;
+    text-align:left;}
+#footer .table_ft .info01 ul{
+    margin-bottom: 20px;
+    padding-left: 100px;}
+#footer .table_ft .info02 ul{
+    margin-bottom: 20px;
+    padding-left: 30px;}
+#footer .table_ft th li{
+    font-size: 12px;
+    line-height: 20px;
+    color: #666;
+    padding-top: 20px;}
+#footer .table_ft th li a{
+    font-weight: bold;
+    color: #666;}
+#footer .snstable .space{ width: 10%;}
+#footer .snstable .sns_icn{
+    width: 20%;
+    text-align: center;
+    padding-left: 10px;}
+
+@media screen and (max-width: 700px) {
+.pc_none{ display:inherit;}
+.sp_none{ display:none;}
+img{
+    max-width: 100%;
+    height: auto;}
+.face img{
+    width: 80px;}
+.cont01 .header {
+    width: 100%!important;
+    height: auto;
+    clear: both;}
+    /*h1上部タイトル*/
+.titleh1 h1{
+    font-size:16px;
+    text-align:left;}
+    /*    .imgbox01 img{
+    width: 100%!important;
+    height: auto;
+}*/
+.imgbox02 img {
+    width: 95%!important;
+    height: auto!important;}
+.imgbox01 {
+    margin: 0px;
+    padding: 0px;}
+.bar {
+    color: #CCCCCC;
+    background: #15165A;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;}
+.txtbox01{
+    padding: 20px!important;}
+.txtbox01 p {
+    line-height: 20px;
+    padding-bottom: 10px;}
+    /*共通フッタ*/
+    /*    #footer h1 {
+    text-align: left;
+    padding-left:5%!important;
+}*/
+.footertxt {
+    text-align: left!important;
+    font-size: 12px;
+    line-height: 20px;
+    padding-left: 5%!important;}
+.footertxt a {
+    color: #45a8de;}
+.table_ft th{
+    width:100%!important;
+    display:block!important;}
+.table_ft th ul {
+    float: none!important;
+    width: 95%!important;
+    margin-bottom: 0px!important;
+    padding-left: 5%!important;}
+.table_ft th li {
+    font-size: 12px;
+    line-height: 20px;
+    color: #666666;
+    padding-top: 10px;}
+.table_ft th li a {
+    font-weight: bold;
+    color: #666666;}
+#footer .snstable {
+    /*width: 150px;*/
+    margin:20px auto;}
+#footer td {
+    text-align: center;}
+#footer {
+    padding-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;}
+.hdlogo h1 img {
+    height: auto;
+    width: 150px!important;}
+#footer h1 img {
+    width: 200px;}
+#footer td img {
+    height: auto;
+    width: 32px;}
+    /*画像タイトル*/
+.hit1{
+    height:30px!important;
+    width:auto!important;}
+.hit2 {
+    height: 20px!important;
+    width:auto!important;}
+.hit3 {
+    height: 46px!important;
+    width:auto!important;}
+    /*Learningアイコンテーブル*/
+.table01 tr,
+.table02 tr,
+.table03 tr,
+.table04 tr{
+    display:block!important;}
+.table01 th,
+.table03 th{
+    list-style:none!important;
+    width: 90%!important;
+    padding:15px 5%!important;
+    display: block!important;
+    margin: 0 auto;}
+.table04 th{
+    width: 100%;
+    padding:15px 5%;
+    display: block;}
+.pd_table{
+    padding:15px 5%!important;}
+.table02 th{
+    list-style:none!important;
+    width: 100%!important;
+    padding:15px 0%!important;
+    display: block!important;}
+    /*Voice*/
+#voice .v1 img,
+#voice2 .v1 img {
+    height: auto;
+    width: 15px!important;}
+    /*グラフ画像*/
+.img02 img {
+    height: 180px!important;
+    width: auto;}
+}
+</style> 
+</head> 
+<body> 
+<table class="cont01"> 
+<tbody> 
+<tr> 
+<td class="hdlogo"><h1><a href="https://www.f-academy.jp/"><img src="https://www.f-academy.jp/img2016/mail/stepmail_img/logo.png" alt="Financial Academy" width="210" height="28" /></a></h1></td> 
+</tr> 
+<tr> 
+<td class="titleh1"><h1>不動産投資で今の給料を超える家賃収入を得る方法とは</h1></td> 
+</tr> 
+<!-- メイン画像 ここから --> 
+<!-- メイン画像 ここまで --> 
+<tr> 
+<td class="border01"></td> 
+</tr> 
+<!-- コンテンツエリアここから --> 
+<tr> 
+<td class="txtbox01"> 
+<!--本文--> <p>{{lead.Last Name:default=受講生のみな}}さん</p> <p>こんにちは。<br /> ファイナンシャルアカデミーの金沢です。</p> <p>不動産投資といえば家賃収入。不労所得の代表格です。<br /> 不労所得とは、働かなくてもお金が入ってくる収入のことです。</p> <p>不動産投資家になった自分をイメージしてみてください。<br /> 例えば、毎月家賃収入が30万円入ってくるとしたら・・・</p> <p>・海外旅行で普段できない経験をしたい。<br /> ・思う存分、好きな趣味に没頭したい。<br /> ・普段より豪華な外食を大切な人と楽しみたい。<br /> ・セミリタイアして自分の好きなことをしたい。</p> <p>など、いろいろな思いが膨らむと思いますが、共通することは<br /> 安定収入があることで、自分自身のライフスタイルを豊かにできることです。</p> <p>また、不動産投資の知識があれば、人生最大の買い物であるマイホーム購入においても<br /> 購入時の価格交渉やローンの見直しなどで数十～数百万円という節約が可能です。</p> <p>■「不動産投資スクール体験セミナー」で学べる、不動産投資の重要ポイント<br /> ・今の給与収入を超える、家賃収入を得る方法<br /> ・住宅費を生涯で1,000万円以上削減するテクニック<br /> ・資金がなくても不動産投資で資産を増やす仕組み</p> <p> {{lead.Last Name:default=受講生のみな}} さんも「不動産投資スクール体験セミナー」に参加すれば<br /> 不動産投資で今の給料を超える家賃収入を得られる道すじが見えてきます。</p> <p>「不動産投資をすること」と、 「不動産投資で長期的に安定収入を得ること」はまったく異なります。「不動産投資スクール体験セミナー」に参加すれば、その違いを実感できるはずです。</p> <p>「不動産投資スクール体験セミナー」は収録映像を用意していますので、WEBでいつでも、どこでも受講することができます。下記のボタンから無料で申込みすることができます。</p> </td> 
+</tr> 
+<tr> 
+<td class="pb30 txt_center"> <a href="https://www.f-academy.jp/school/fudolp.html?psn=17717"> 
+<table class="btn01 bg_orange"> 
+<tbody> 
+<tr> 
+<td class="ttl">無料セミナーの申込みはこちら</td> 
+<td class="arw"><img src="https://www.f-academy.jp/img2016/mail/stepmail_img/btn.png" alt="" width="40" height="40" /></td> 
+</tr> 
+</tbody> 
+</table> </a> </td> 
+</tr> 
+<!--ボタン/end--> 
+</tbody> 
+</table> 
+<!-- bodyここまで --> 
+<!-- フッターここから --> 
+<table class="cont01"> 
+<tbody> 
+<tr> 
+<td class="txtbox01 txt_center"><img src="https://www.f-academy.jp/img2016/mail/stepmail_img/ftimg.png" alt="Think Money. Think Life" width="320" height="40" class="hit2" /></td> 
+</tr> 
+<tr> 
+<td class="border01"></td> 
+</tr> 
+<tr> 
+<td id="footer"> <h1><a href="https://www.f-academy.jp/"><img src="https://www.f-academy.jp/img2016/mail/stepmail_img/logo.png" alt="Financial Academy" width="210" height="28" /></a></h1> <p class="footertxt"> 東京都千代田区丸の内3-1-1 </p> 
+<table class="table_ft"> 
+<tbody> 
+<tr> 
+<th class="info01" scope="col"> 
+<ul> 
+<li>講座内容や受講に関する問合せ<br /> <a href="tel:0120104384">0120-104-384</a> <br />月-金 9:00-21:00　土日祝 10:00-19:00</li> 
+<li>「マイページ」は<a href="https://www.f-academy.jp/login.html">こちら</a></li> 
+</ul> </th> 
+<th class="info02" scope="col"> 
+<ul> 
+<li><br /> <a href="mailto:info@f-academy.jp">info@f-academy.jp</a> <br />常時受付</li> 
+<li>メルマガ配信停止は<a href="https://study.f-academy.jp/newsletter_UnsubscribePage.html">こちら</a></li> 
+</ul> </th> 
+</tr> 
+</tbody> 
+</table> 
+<div class="clearfix"></div> 
+<div class="txt_center"> 
+<table class="snstable"> 
+<tbody> 
+<tr> 
+<td class="space"></td> 
+<td class="icn_sns"><a href="https://www.facebook.com/financialacademy/"><img src="https://www.f-academy.jp/img2016/mail/sns01.png" alt="facebook" width="32" height="28" /></a></td> 
+<td class="icn_sns"><a href="https://twitter.com/facademy"><img src="https://www.f-academy.jp/img2016/mail/sns02.png" alt="twitter" width="32" height="28" /></a></td> 
+<td class="icn_sns"><a href="https://www.youtube.com/user/FinancialAcademy"><img src="https://www.f-academy.jp/img2016/mail/sns03.png" alt="youtube" width="32" height="28" /></a></td> 
+<td class="icn_sns"><a href="https://www.instagram.com/financial_academy/"><img src="https://www.f-academy.jp/img2016/mail/sns04.png" alt="instagram" width="32" height="28" /></a></td> 
+<td class="space"></td> 
+</tr> 
+</tbody> 
+</table> 
+</div> </td> 
+<!-- #footer/end--> 
+</tr> 
+</tbody> 
+</table> 
+<!-- フッターここまで -->  
+</body>
+</html>
